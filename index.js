@@ -10,7 +10,7 @@ import cors from "cors";
 const app = express();
 
 app.use(cors(
-    { origin: "https://bookstore-aap.netlify.app" }
+    { origin: "https://bookstores-app.netlify.app" }
 
 ));
 app.use(express.json());

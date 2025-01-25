@@ -12,6 +12,7 @@ const app = express();
 app.use(cors(
     { 
         origin: "*", // Allow all origins
+        methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     }
 
 ));

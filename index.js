@@ -1,16 +1,18 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
- 
 import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js";
 import cors from "cors";
+import authMiddleware from "./middleware/auth.js";
 
 
 const app = express();
 
 app.use(cors(
-    { origin: "http://localhost:5173" }
+    { 
+        origin: "*", // Allow all origins
+    }
 
 ));
 app.use(express.json());
@@ -35,5 +37,5 @@ app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
 app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
+    console.log(`Server is listening on port http://localhost:${PORT}`);
 });

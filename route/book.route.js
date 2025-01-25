@@ -10,7 +10,6 @@ export default router;
 import express from "express"; 
 import {createBook, getBook, upload } from "../controller/book.controller.js";
 
- 
 
 const router = express.Router();
 
